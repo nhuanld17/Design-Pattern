@@ -1,0 +1,32 @@
+ Mẫu thiết kế Factory là một mẫu thiết kế khởi tạo cung cấp một giao diện để tạo
+ các đối tượng trong một lớp cha nhưng cho phép các lớp con quyết định lớp nào sẽ
+ được khởi tạo. Nói cách khác, nó cung cấp một cách để ủy thác logic khởi tạo đối
+ tượng cho các lớp con.
+
+ Hãy tưởng tượng bạn đang xây dựng một chương trình mô phỏng một máy tính cơ bản
+ trên giao diện console. Bạn có các loại phép toán khác nhau như phép cộng, phép trừ,
+ phép nhân, phép chia, v.v. Mỗi phép toán có hành vi riêng biệt của nó. Bây giờ, bạn
+ muốn tạo các đối tượng phép toán này trong chương trình của mình dựa trên lựa chọn
+ của khách hàng.
+
+ Thách thức đặt ra là bạn cần một cách để tạo các đối tượng phép toán này mà không
+ làm cho mã của bạn trở nên quá phức tạp hoặc gắn kết chặt chẽ. Điều này có nghĩa là
+ bạn không muốn mã của mình phụ thuộc quá nhiều vào các lớp cụ thể của các phép toán.
+ Bạn cũng muốn dễ dàng thêm các loại phép toán mới sau này mà không cần thay đổi quá
+ nhiều mã.
+
+ Mẫu thiết kế Factory giúp bạn giải quyết vấn đề này bằng cách cung cấp một cách để tạo
+ các đối tượng mà không cần chỉ định lớp cụ thể của chúng. Thay vào đó, bạn ủy thác quá
+ trình tạo đối tượng cho một lớp nhà máy (factory class).
+
+ 1. Định nghĩa product Interface(Operation): Xem Interface Operation
+ 2. Triển khai các sản phẩm cụ thể cho từng phép toán
+ - Xem class AddOperation, DivOperation, MulOperation, SubOperation
+ 3. Tạo lớp nhà máy (OperationFactory) với phương thức getInstance để tạo đối tượng dựa
+ trên một vài tham số.
+ - Xem interface OperationFactory và class OperationFactoryImpl.
+ 4. Sử dụng nhà máy(factory) để tạo đối tượng mà không cần biết lớp cụ thể
+ - Xem class Main
+
+
+
