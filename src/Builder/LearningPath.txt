@@ -1,0 +1,34 @@
+
+ Builder Pattern là 1 mẫu cung cấp một cách để xây dựng một đối tượng bằng cách cho phép
+ bạn thiết lập các thuộc tính (hoặc đặc điểm) của nó theo từng bước một.
+
+ Một số tham số có thể là tùy chọn cho một đối tượng, nhưng chúng ta bị buộc phải gửi tất
+ cả các tham số và các tham số tùy chọn cần phải được gửi dưới dạng NULL. Chúng ta có thể
+ giải quyết vấn đề này với số lượng lớn các tham số bằng cách cung cấp một constructor với
+ các tham số bắt buộc và sau đó sử dụng các phương thức setter khác nhau để thiết lập các
+ tham số tùy chọn.
+
+ Mẫu thiết kế này đặc biệt hữu ích khi xử lý các đối tượng có nhiều tham số hoặc cấu hình
+ tùy chọn.
+
+ Hãy tưởng tượng chúng ta đang phát triển một thực thể người dùng. Người dùng có các thuộc
+ tính khác nhau như tên, email, số điện thoại và thành phố, v.v. Ở đây, tên và email là các
+ trường bắt buộc và số điện thoại và thành phố là các trường tùy chọn. Bây giờ, mỗi người
+ có thể có các tổ hợp khác nhau của các thuộc tính này. Một số có thể có thành phố, số khác
+ có thể không. Một số có thể có số điện thoại, số khác có thể không. Mẫu thiết kế Builder
+ giúp bạn tạo ra các người dùng này một cách linh hoạt, từng bước một.
+
+ --> Lớp UserBuilder: Đây là lớp builder nội tại chịu trách nhiệm xây dựng các đối tượng User.
+ Nó có các trường đại diện cho sự có mặt hoặc vắng mặt của các thuộc tính khác nhau (tên, email,
+ số điện thoại, thành phố). Lớp này cung cấp các phương thức setter cho mỗi thuộc tính, các
+ phương thức này trả về chính builder (name(), phone(), city(), email()). Điều này cho phép
+ phương thức được xâu chuỗi.
+
+ --> Lớp User: Đây là lớp đại diện cho sản phẩm mà bạn muốn xây dựng bằng cách sử dụng mẫu thiết
+ kế builder. Nó có các trường riêng tư để đại diện cho các thuộc tính của người dùng (tên, email,
+ số điện thoại, thành phố). Constructor của User nhận một đối tượng UserBuilder và khởi tạo các
+ trường của nó dựa trên các thiết lập của builder. Có một phương thức tĩnh builder() trả về một
+ instance mới của UserBuilder, cung cấp một cách tiện lợi để tạo một builder mới.
+
+
+
