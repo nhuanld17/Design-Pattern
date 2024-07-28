@@ -1,0 +1,34 @@
+
+  Mẫu thiết kế Observer (Quan sát viên) là một mẫu thiết kế hành vi thường được sử
+  dụng trong lập trình hướng đối tượng để thiết lập sự phụ thuộc một-nhiều giữa các
+  đối tượng. Trong mẫu thiết kế này, một đối tượng (được gọi là subject hoặc observable)
+  duy trì một danh sách các đối tượng phụ thuộc của nó (observers) và thông báo cho chúng
+  về bất kỳ sự thay đổi trạng thái nào, thường bằng cách gọi một trong các phương thức của
+  chúng.
+
+  Cách hoạt động như sau:
+
+  + Subject (Chủ thể): Đây là đối tượng giữ trạng thái và quản lý danh sách các observers.
+  Nó cung cấp các phương thức để gắn kết (attach), tách ra (detach), và thông báo (notify)
+  cho các observers.
+
+  + Observer (Người quan sát): Đây là giao diện định nghĩa các phương thức mà subject gọi
+  để thông báo cho observer về bất kỳ thay đổi trạng thái nào. Thông thường, các observers
+  sẽ triển khai giao diện này.
+
+  + Concrete Subject (Chủ thể cụ thể): Đây là triển khai cụ thể của giao diện chủ thể. Nó
+  duy trì trạng thái và gửi thông báo cho các observers khi trạng thái thay đổi.
+
+  + Concrete Observer (Người quan sát cụ thể): Đây là triển khai cụ thể của giao diện người
+  quan sát. Nó đăng ký với một chủ thể để nhận thông báo và triển khai phương thức cập nhật
+  (update) để phản hồi các thay đổi trạng thái.
+
+
+  Đây là bản dịch tiếng Việt của đoạn văn bạn đã cung cấp:
+
+  Trong bối cảnh kịch bản người đăng ký kênh YouTube, kênh YouTube là Subject (chủ thể),
+  và những người đăng ký là các người quan sát (Observer). Khi một sự kiện xảy ra trên kênh
+  YouTube, nó sẽ thông báo cho tất cả những người đăng ký về video mới để họ có thể xem nó.
+
+
+
