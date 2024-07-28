@@ -12,6 +12,6 @@
   hoặc các decorator khác.
 
   Thứ tự đọc code :
-  interface Shape-Class Cirle-Class ShapeDecorator-Class Borderdecorator-Class ColorDecorator
-  -Class Decorator Main.
+  interface Shape->Class Cirle->Class ShapeDecorator->Class Borderdecorator->
+  Class ColorDecorator->Class Decorator Main.
 

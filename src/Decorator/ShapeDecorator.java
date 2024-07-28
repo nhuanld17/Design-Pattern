@@ -19,7 +19,7 @@ public abstract class ShapeDecorator implements Shape{
 }
 
 /*
-  Lớp trừu tượng ShapeDecorator: Một lớp trừu tượng thực hiện giao diện Shape. Lớp này
+  Lớp trừu tượng ShapeDecorator: Một lớp trừu tượng kế thừa giao diện Shape. Lớp này
   chứa một tham chiếu đến một đối tượng Shape và ủy quyền phương thức cho đối tượng
   này.
 */
