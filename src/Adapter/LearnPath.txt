@@ -1,0 +1,40 @@
+ Mẫu thiết kế Adapter là một mẫu thiết kế cấu trúc cho phép các đối tượng
+ với các giao diện không tương thích có thể làm việc cùng nhau. Nó hoạt động
+ như một cầu nối giữa hai giao diện không tương thích.
+
+ Hãy tưởng tượng một tình huống mà hai lớp hoặc thành phần thực hiện các nhiệm
+ vụ tương tự nhưng có tên phương thức, kiểu tham số hoặc cấu trúc khác nhau. Mẫu
+ thiết kế Adapter cho phép các giao diện không tương thích này làm việc cùng nhau
+ bằng cách cung cấp một lớp bao bọc (adapter) để chuyển đổi giao diện của một lớp
+ thành giao diện mà khách hàng mong đợi.
+
+ + Target là giao diện được khách hàng mong đợi.
+ + Adaptee là lớp cần được điều chỉnh.
+ + Adapter là lớp thực hiện giao diện Target và bao bọc lớp Adaptee.
+ + Client class là lớp sử dụng adapter để tương tác với lớp Adaptee thông qua
+ giao diện Target.
+
+ 1. CellPhone là giao diện mục tiêu mà mã nguồn của bạn mong đợi, và bạn không có một
+    triển khai cho nó.
+ 2. FriendCellPhone là lớp mà bạn muốn điều chỉnh/tái sử dụng (lớp Adaptee), lớp này
+    có phương thức tên là ring thay vì tạo một triển khai mới cho giao diện CellPhone.
+ 3. CellPhoneAdapter là lớp adapter triển khai giao diện CellPhone và bao bọc một đối
+    tượng của lớp FriendCellPhone. Phương thức call trong lớp adapter ủy quyền cho
+    phương thức ring của lớp FriendCellPhone.
+ 4. Lớp AdapterMain đóng vai trò là khách hàng, minh họa việc sử dụng mẫu thiết kế Adapter
+    trong thực tế.
+
+
+ Lớp Adaptee có thể là một lớp từ thư viện bên thứ ba hoặc từ mã nguồn kế thừa mà bạn không
+ thể sửa đổi trực tiếp. Bằng cách sử dụng một adapter, bạn có thể điều chỉnh giao diện của
+ nó để phù hợp với giao diện mà khách hàng mong đợi mà không cần phải sửa đổi mã gốc.
+
+ Khách hàng có thể chỉ yêu cầu một số chức năng cụ thể từ lớp Adaptee. Bằng cách sử dụng một
+ adapter, bạn có thể cung cấp một giao diện tùy chỉnh chỉ lộ ra các chức năng cần thiết, thay
+ vì lộ ra toàn bộ giao diện của lớp Adaptee.
+
+ Có vẻ như bạn có thể đạt được chức năng tương tự bằng cách tạo một đối tượng của giao diện
+ Target trực tiếp, tuy nhiên, việc sử dụng một adapter mang lại nhiều lợi ích về khả năng tái
+ sử dụng mã nguồn, bảo trì và tính linh hoạt, đặc biệt khi làm việc với mã nguồn hiện có hoặc
+ thư viện của bên thứ ba.
+
