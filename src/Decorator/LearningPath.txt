@@ -1,0 +1,17 @@
+  Mẫu thiết kế Decorator là một mẫu thiết kế trong lập trình hướng đối tượng cho phép
+  thêm hành vi vào các đối tượng riêng lẻ, có thể là tĩnh hoặc động, mà không ảnh hưởng
+  đến hành vi của các đối tượng khác từ cùng một lớp.
+
+  Trong mẫu thiết kế này, có một lớp cơ sở (hoặc giao diện) định nghĩa chức năng chung,
+  và một hoặc nhiều lớp decorator để thêm hành vi bổ sung. Các lớp decorator này bao bọc
+  đối tượng ban đầu, bổ sung hành vi của nó theo cách mô-đun và linh hoạt.
+
+  Hãy tưởng tượng, bạn được giao nhiệm vụ tạo một ứng dụng vẽ cho phép người dùng tạo và
+  tùy chỉnh các hình dạng với nhiều cách trang trí khác nhau. Ứng dụng này nên dễ dàng thêm
+  các decorator mới cho các tính năng bổ sung mà không thay đổi mã hiện có cho các hình dạng
+  hoặc các decorator khác.
+
+  Thứ tự đọc code :
+  interface Shape-Class Cirle-Class ShapeDecorator-Class Borderdecorator-Class ColorDecorator
+  -Class Decorator Main.
+
